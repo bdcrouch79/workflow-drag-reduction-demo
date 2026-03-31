@@ -4,9 +4,9 @@
 
 IronRidge Project Support Request Workflow
 
-## What This Repo Demonstrates
+## What It Shows
 
-This repository shows how IronRidge could turn unstructured internal requests into a visible workflow with better routing, ownership, approval clarity, and queue aging discipline.
+This repo shows how IronRidge could turn unstructured internal requests into one visible workflow with better routing, ownership, approval clarity, and queue discipline.
 
 ## Primary Audience
 

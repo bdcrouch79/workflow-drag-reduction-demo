@@ -1,6 +1,6 @@
 # Screenshots
 
-Capture the following screenshots for portfolio use:
+Capture these views:
 
 - full workflow overview with intake panel and queue visible
 - queue view showing aging, owners, and priority badges

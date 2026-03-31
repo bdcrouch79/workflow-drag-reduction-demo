@@ -2,15 +2,17 @@
 
 ## Overview
 
-IronRidge Project Support Request Workflow shows how IronRidge Contractors could replace scattered email-and-spreadsheet support requests with a cleaner operating queue for intake, routing, approvals, assignment, and aging visibility.
+This repo shows what happens when scattered internal requests stop living in inboxes, side conversations, and personal trackers.
+
+The IronRidge Project Support Request Workflow models a cleaner queue for intake, routing, approvals, assignment, and aging visibility. It is meant to feel practical, not theoretical.
 
 ## Business Problem
 
-Project managers and support teams submit operational requests through inboxes, meeting notes, hallway conversations, and personal trackers. Requests get delayed when ownership is unclear, approvals stall, or aging is not visible across departments.
+Project managers and support teams still send real work through inboxes, meeting notes, hallway conversations, and personal trackers. Things slow down when ownership is fuzzy, approvals sit too long, or nobody can see which requests have been aging quietly in the queue.
 
-## Solution Concept
+## What This Repo Adds
 
-This repo models a practical internal request workflow using lightweight seed data, concise documentation, and a static mock queue. The emphasis is on believable operating rules, clean request lifecycle visibility, and a business-facing presentation that feels useful rather than theoretical.
+This repo models a practical internal request workflow using lightweight seed data, concise docs, and a static queue mock. The emphasis is believable routing logic, visible aging, and a workflow shape that feels like something an operations team would actually use.
 
 ## Ecosystem Context
 
@@ -30,9 +32,9 @@ This repo represents the intake and routing layer within the broader IronRidge d
 
 The raw layer focuses on request type, ownership, approval stage, current status, and aging. The sample records stay grounded in common contractor support work such as document control, setup changes, reporting requests, field coordination, and closeout help.
 
-## Mock Experience / Screenshots
+## Mock Experience
 
-The mock queue is intentionally practical: intake context, aging cards, a visible queue, and simple breakdowns by request type and status. It is designed to read like a useful internal operations screen rather than a product landing page.
+The mock queue stays intentionally practical: intake context, aging cards, a visible queue, and simple breakdowns by request type and status. It should read like a useful internal operations screen, not a product landing page.
 
 ## Future Enhancements
 
@@ -43,4 +45,4 @@ The mock queue is intentionally practical: intake context, aging cards, a visibl
 
 ## Fictional Demo Notice
 
-This repository is part of a fictional demonstration environment built around IronRidge Contractors, a sample contractor-focused operating company created to showcase reporting, workflow, execution, and operations system design. Names, data, and scenarios are illustrative, but the business patterns reflect real-world operational needs.
+This repository is part of a fictional IronRidge Contractors environment built to show reporting, workflow, execution, and field operations design. The names and records are made up. The operating friction is not.

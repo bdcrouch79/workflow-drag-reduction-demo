@@ -1,6 +1,6 @@
 # Business Context
 
-IronRidge handles a wide range of support requests across project delivery, field services, closeout, reporting, and internal operations. The work matters, but the intake path is often inconsistent, which makes aging and ownership harder to manage.
+IronRidge handles a wide range of support requests across project delivery, field services, closeout, reporting, and internal operations. The work matters, but the intake path is inconsistent, which makes aging and ownership harder to manage than they should be.
 
 ## Current Realities
 
@@ -11,4 +11,4 @@ IronRidge handles a wide range of support requests across project delivery, fiel
 
 ## Why Teams Care
 
-Teams need a lightweight internal workflow that makes requests easier to submit, easier to route, and easier to follow through without turning support work into heavy process overhead.
+Teams need a lightweight workflow that makes requests easier to submit, easier to route, and easier to finish without turning support work into process theater.

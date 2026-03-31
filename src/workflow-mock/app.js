@@ -12,7 +12,7 @@ const agingCards = [
   { label: "Open Requests", value: "17", note: "Requests still moving through triage, review, or execution." },
   { label: "Over 14 Days", value: "8", note: "Items most likely to need follow-up or escalation." },
   { label: "Waiting On Approval", value: "4", note: "Queue pressure sitting inside review stages." },
-  { label: "Completed Recently", value: "4", note: "Recent completions during the current operating window." }
+  { label: "Closed Recently", value: "4", note: "Requests closed during the current operating window." }
 ];
 
 const queueRows = [
@@ -26,7 +26,7 @@ const queueRows = [
 
 const typeMix = [
   { title: "Field Coordination", meta: "5 active or recent requests" },
-  { title: "Document Support", meta: "5 requests with steady PM usage" },
+  { title: "Document Support", meta: "5 requests with steady PM demand" },
   { title: "Closeout Assistance", meta: "4 requests tied to turnover readiness" },
   { title: "Reporting Request", meta: "4 requests from operations and leadership" }
 ];
@@ -34,7 +34,7 @@ const typeMix = [
 const statusMix = [
   { title: "In Progress", meta: "10 requests currently being worked" },
   { title: "Submitted", meta: "4 requests awaiting triage" },
-  { title: "Approved", meta: "4 requests ready for execution" },
+  { title: "Approved", meta: "4 requests ready to move" },
   { title: "Overdue", meta: "2 requests need immediate attention" }
 ];
 
