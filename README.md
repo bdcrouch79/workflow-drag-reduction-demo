@@ -14,6 +14,14 @@ Project managers and support teams still send real work through inboxes, meeting
 
 This repo models a practical internal request workflow using lightweight seed data, concise docs, and a static queue mock. The emphasis is believable routing logic, visible aging, and a workflow shape that feels like something an operations team would actually use.
 
+## Screenshots
+
+### Overview
+![Project Support Workflow Overview](docs/screenshots/hero-overview.png)
+
+### Detail View
+![Project Support Workflow Detail](docs/screenshots/detail-view.png)
+
 ## Ecosystem Context
 
 This repo represents the intake and routing layer within the broader IronRidge demo ecosystem. The requests shown here can generate execution commitments tracked in `execution-infrastructure-demo`, may draw on field conditions visible in `contractor-ops-system-demo`, and can ultimately feed reporting demand or volume signals that appear in `ops-visibility-demo`.
