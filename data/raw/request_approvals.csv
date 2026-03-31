@@ -1,0 +1,21 @@
+ApprovalID,RequestID,StageName,Approver,Decision,DecisionDate,Notes
+APR-701,REQ-602,Ops Approval,Rachel Holloway,Approved,2026-03-21,Approved after confirming dock startup scope impact
+APR-702,REQ-606,Controller Review,Monica Reeves,Approved,2026-03-18,Alternate supplier setup approved for expedite path
+APR-703,REQ-610,Ops Approval,Rachel Holloway,Pending,,Need updated scope note from PM before decision
+APR-704,REQ-613,Controller Review,Monica Reeves,Approved,2026-03-18,Vendor profile aligns with annual uniform refresh plan
+APR-705,REQ-618,Ops Approval,Rachel Holloway,Pending,,Need final phasing note from field operations
+APR-706,REQ-620,Controller Review,Monica Reeves,Pending,,Insurance and tax packet not complete yet
+APR-707,REQ-627,Controller Review,Monica Reeves,Rejected,2026-03-20,Vendor already exists in ERP with active status
+APR-708,REQ-628,People Admin Review,Ashley Kent,Approved,2026-03-22,Approved as internal operating standard update
+APR-709,REQ-614,Executive Review,Ethan Mercer,Approved,2026-03-12,Proceed with simple weekly format first
+APR-710,REQ-617,Safety Escalation,Chris Dalton,Approved,2026-03-10,Immediate action required due to temporary egress risk
+APR-711,REQ-620,Controller Review,Monica Reeves,Under Review,2026-03-26,Still waiting on vendor compliance documentation
+APR-712,REQ-602,Project Confirmation,Megan Foster,Approved,2026-03-20,PM confirmed change is required before turnover prep
+APR-713,REQ-610,Project Confirmation,Tyler Boone,Approved,2026-03-13,Template adjustment approved pending ops review
+APR-714,REQ-618,Field Review,Caleb Dyer,Approved,2026-03-23,Field sequence note is operationally valid
+APR-715,REQ-628,Ops Approval,Rachel Holloway,Approved,2026-03-23,Internal guidance can be distributed in April
+APR-716,REQ-613,People Admin Review,Ashley Kent,Approved,2026-03-17,Onboarding need is confirmed
+APR-717,REQ-620,Project Confirmation,Tyler Boone,Approved,2026-03-14,Replacement sensor vendor needed for schedule recovery
+APR-718,REQ-627,Project Confirmation,Jordan Hayes,Approved,2026-03-18,Operational need valid even though setup request was rejected
+APR-719,REQ-606,Project Confirmation,Tyler Boone,Approved,2026-03-17,Procurement shift supported by field conditions
+APR-720,REQ-602,Finance Awareness,Monica Reeves,Approved,2026-03-21,No billing structure conflict identified

@@ -1,0 +1,8 @@
+flowchart LR
+    A[Intake] --> B[Triage]
+    B --> C{Approval Needed}
+    C -->|Yes| D[Approval Stage]
+    C -->|No| E[Assignment]
+    D --> E
+    E --> F[In Progress]
+    F --> G[Completed]

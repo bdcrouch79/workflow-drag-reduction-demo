@@ -1,0 +1,29 @@
+RequestID,RequestType,SubmittedBy,Department,RelatedProjectID,Priority,SubmittedDate,AssignedTo,ApprovalStage,CurrentStatus,AgingDays,Summary
+REQ-601,Document Support,Noah Whitaker,Project Delivery,IR-101,Medium,2026-03-28,Lena Brooks,None,In Progress,3,Need updated submittal log for owner progress review
+REQ-602,Project Setup Change,Megan Foster,Project Delivery,IR-102,High,2026-03-20,Olivia Chen,Ops Approval,Approved,11,Revise cost code structure for dock startup scope
+REQ-603,Closeout Assistance,Tyler Boone,Project Delivery,IR-104,High,2026-03-14,Lena Brooks,None,In Progress,17,Support needed to close remaining O and M binder gaps
+REQ-604,Reporting Request,Rachel Holloway,Operations Support,,Medium,2026-03-24,Kelsey Morgan,None,In Progress,7,Build monthly watch-list summary for leadership packet
+REQ-605,Field Coordination,Aaron Pike,Field Operations,IR-105,High,2026-03-18,Caleb Dyer,None,In Progress,13,Need weekend access escalation for dock tie-in sequence
+REQ-606,Vendor Setup,Monica Reeves,Operations Support,IR-103,Medium,2026-03-17,Monica Reeves,Controller Review,Completed,14,Set up alternate HVAC supplier for lead-time recovery
+REQ-607,Operations Support,Olivia Chen,Operations Support,IR-108,Low,2026-03-27,Evan Cross,None,Submitted,4,Need simple tracker for internal furniture move coordination
+REQ-608,Document Support,Matt Grayson,Project Delivery,IR-101,Medium,2026-03-19,Lena Brooks,None,Completed,12,Compile outstanding RFI attachments for client issue log
+REQ-609,Reporting Request,Jordan Hayes,Field Services,IR-107,Medium,2026-03-21,Kelsey Morgan,None,In Progress,10,Need service backlog by region for dispatch review
+REQ-610,Project Setup Change,Noah Whitaker,Project Delivery,IR-103,High,2026-03-12,Olivia Chen,Ops Approval,Waiting on Info,19,Add alternate phasing note to project kickoff checklist
+REQ-611,Closeout Assistance,Julia Mays,Special Projects,IR-106,Medium,2026-03-23,Lena Brooks,None,In Progress,8,Need client training roster and final signoff packet
+REQ-612,Field Coordination,Derek Shaw,Field Services,IR-107,Medium,2026-03-26,Jordan Hayes,None,Completed,5,Request access list update for after-hours response work
+REQ-613,Vendor Setup,Ashley Kent,People and Administration,,Low,2026-03-16,Monica Reeves,Controller Review,Approved,15,Add uniform vendor for field onboarding refresh
+REQ-614,Operations Support,Ethan Mercer,Executive,,High,2026-03-11,Rachel Holloway,None,In Progress,20,Prepare leadership review format for weekly operations standup
+REQ-615,Document Support,Megan Foster,Special Projects,IR-104,Medium,2026-03-15,Lena Brooks,None,Overdue,16,Need revised warranty letter package for Glenpark turnover
+REQ-616,Reporting Request,Kelsey Morgan,Operations Support,,Low,2026-03-29,Evan Cross,None,Submitted,2,Create quick export for request volume by department
+REQ-617,Field Coordination,Chris Dalton,Field Operations,IR-103,Critical,2026-03-10,Caleb Dyer,None,In Progress,21,Immediate route change needed for temporary egress compliance
+REQ-618,Project Setup Change,Tyler Boone,Project Delivery,IR-105,Medium,2026-03-22,Olivia Chen,Ops Approval,Under Review,9,Update project template for phased dock shutdown plan
+REQ-619,Closeout Assistance,Jordan Hayes,Field Services,IR-106,Medium,2026-03-18,Lena Brooks,None,In Progress,13,Help package Brookstone training records and waivers
+REQ-620,Vendor Setup,Noah Whitaker,Project Delivery,IR-105,High,2026-03-13,Monica Reeves,Controller Review,Under Review,18,Add overhead door sensor vendor for replacement order
+REQ-621,Operations Support,Rachel Holloway,Operations Support,,Medium,2026-03-25,Olivia Chen,None,Completed,6,Coordinate updated regional manager contact roster
+REQ-622,Reporting Request,Evan Cross,Operations Support,,Medium,2026-03-08,Kelsey Morgan,None,Overdue,23,Need consolidated monthly request aging view for leadership
+REQ-623,Document Support,Aaron Pike,Field Operations,IR-103,High,2026-03-09,Lena Brooks,None,In Progress,22,Need current permit and inspection backup in one packet
+REQ-624,Field Coordination,Brooke Allen,Field Services,IR-107,Medium,2026-03-24,Jordan Hayes,None,In Progress,7,Need updated route handoff for new Cedar Hill coverage plan
+REQ-625,Project Setup Change,Olivia Chen,Operations Support,IR-108,Low,2026-03-30,Evan Cross,None,Submitted,1,Add shared room-by-room move list to internal refresh setup
+REQ-626,Closeout Assistance,Matt Grayson,Project Delivery,IR-104,High,2026-03-07,Lena Brooks,None,Overdue,24,Need final attic stock list and closeout package review
+REQ-627,Vendor Setup,Jordan Hayes,Field Services,IR-107,Medium,2026-03-18,Monica Reeves,Controller Review,Rejected,13,Requested vendor duplicate already exists in accounting
+REQ-628,Operations Support,Ashley Kent,People and Administration,,Medium,2026-03-20,Olivia Chen,People Admin Review,Approved,11,Standardize internal request intake guidance for staff

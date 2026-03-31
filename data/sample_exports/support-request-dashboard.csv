@@ -1,0 +1,7 @@
+RequestID,RequestType,Priority,AssignedTo,CurrentStatus,AgingDays,Summary
+REQ-617,Field Coordination,Critical,Caleb Dyer,In Progress,21,Immediate route change needed for temporary egress compliance
+REQ-626,Closeout Assistance,High,Lena Brooks,Overdue,24,Need final attic stock list and closeout package review
+REQ-623,Document Support,High,Lena Brooks,In Progress,22,Need current permit and inspection backup in one packet
+REQ-622,Reporting Request,Medium,Kelsey Morgan,Overdue,23,Need consolidated monthly request aging view for leadership
+REQ-620,Vendor Setup,High,Monica Reeves,Under Review,18,Add overhead door sensor vendor for replacement order
+REQ-610,Project Setup Change,High,Olivia Chen,Waiting on Info,19,Add alternate phasing note to project kickoff checklist
