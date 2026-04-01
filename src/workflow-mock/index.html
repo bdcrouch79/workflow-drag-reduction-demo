@@ -13,66 +13,104 @@
         <img class="wordmark" src="../../assets/ironridge-wordmark.svg" alt="IronRidge Contractors" />
         <p class="eyebrow">Workflow And Intake Layer</p>
         <h1>Project Support Request Workflow</h1>
-        <p class="subhead">A practical internal queue for routing requests, managing approvals, and reducing drag across project and support teams.</p>
+        <p class="subhead">A working intake screen for routing requests, surfacing queue age, and keeping support work from disappearing between teams.</p>
       </div>
-      <div class="hero-meta">
+      <aside class="hero-meta">
         <div class="meta-label">Queue Snapshot</div>
         <div class="meta-value">28 Requests</div>
-        <div class="meta-note">Includes submitted, approved, in-progress, and overdue work</div>
-      </div>
+        <div class="meta-note">Includes submitted, approved, in-progress, and overdue work moving through support operations.</div>
+      </aside>
     </header>
 
-    <section class="panel intake-panel">
-      <div>
-        <h2>Request Intake</h2>
-        <p>Request types reflect day-to-day contractor support work across document control, setup changes, reporting, field coordination, closeout help, vendor setup, and operations support.</p>
-      </div>
-      <div class="chips" id="request-types"></div>
-    </section>
-
-    <section class="card-grid" id="aging-cards"></section>
-
-    <section class="panel">
-      <div class="panel-header">
-        <div>
-          <h2>Active Queue</h2>
-          <p>Visible ownership, aging, and current status for the requests needing the most attention.</p>
+    <section class="workflow-toolbar panel">
+      <div class="toolbar-group">
+        <span class="toolbar-label">View</span>
+        <div class="segmented-control">
+          <button class="segment active" type="button">All Requests</button>
+          <button class="segment" type="button">Needs Review</button>
+          <button class="segment" type="button">Overdue</button>
         </div>
-        <div class="panel-chip">Review standard: daily triage, weekly aging review</div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Request</th>
-            <th>Priority</th>
-            <th>Assigned To</th>
-            <th>Status</th>
-            <th>Aging</th>
-          </tr>
-        </thead>
-        <tbody id="queue-rows"></tbody>
-      </table>
+      <div class="toolbar-group">
+        <span class="toolbar-label">Priority</span>
+        <div class="filter-chips">
+          <span class="filter-chip high">Critical / High</span>
+          <span class="filter-chip medium">Medium</span>
+          <span class="filter-chip neutral">Waiting On Info</span>
+        </div>
+      </div>
+      <div class="toolbar-group toolbar-note">
+        <span class="toolbar-label">Review cadence</span>
+        <strong>Daily triage with a weekly aging review</strong>
+      </div>
     </section>
 
-    <section class="two-up">
-      <div class="panel">
+    <section class="workflow-layout">
+      <section class="panel queue-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Active Queue</h2>
+            <p>Requests with visible ownership, current status, and aging pressure.</p>
+          </div>
+          <div class="panel-chip">Ops-facing queue view</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Request</th>
+              <th>Priority</th>
+              <th>Assigned To</th>
+              <th>Status</th>
+              <th>Aging</th>
+            </tr>
+          </thead>
+          <tbody id="queue-rows"></tbody>
+        </table>
+      </section>
+
+      <aside class="queue-rail">
+        <section class="panel rail-panel">
+          <div class="panel-header rail-header">
+            <div>
+              <h2>Aging Snapshot</h2>
+              <p>Where queue drag is starting to show up.</p>
+            </div>
+          </div>
+          <div class="aging-stack" id="aging-cards"></div>
+        </section>
+
+        <section class="panel rail-panel">
+          <div class="panel-header rail-header">
+            <div>
+              <h2>Status Breakdown</h2>
+              <p>Current state of the queue.</p>
+            </div>
+          </div>
+          <div id="status-mix" class="stack"></div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="lower-grid">
+      <section class="panel intake-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Request Intake</h2>
+            <p>The request categories currently feeding the queue.</p>
+          </div>
+        </div>
+        <div class="chips" id="request-types"></div>
+      </section>
+
+      <section class="panel">
         <div class="panel-header">
           <div>
             <h2>Request Mix</h2>
-            <p>Where the queue is clustering right now.</p>
+            <p>Where support demand is clustering right now.</p>
           </div>
         </div>
         <div id="type-mix" class="stack"></div>
-      </div>
-      <div class="panel">
-        <div class="panel-header">
-          <div>
-            <h2>Status Breakdown</h2>
-            <p>Current state of the queue.</p>
-          </div>
-        </div>
-        <div id="status-mix" class="stack"></div>
-      </div>
+      </section>
     </section>
   </div>
   <script src="./app.js"></script>

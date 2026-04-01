@@ -38,13 +38,15 @@ const statusMix = [
   { title: "Overdue", meta: "2 requests need immediate attention" }
 ];
 
-document.getElementById("request-types").innerHTML = requestTypes.map((item) => `<span class="chip">${item}</span>`).join("");
+document.getElementById("request-types").innerHTML = requestTypes.map((item) => `
+  <span class="chip">${item}</span>
+`).join("");
 
 document.getElementById("aging-cards").innerHTML = agingCards.map((item) => `
-  <article class="card">
-    <div class="card-label">${item.label}</div>
-    <div class="card-value">${item.value}</div>
-    <div class="card-note">${item.note}</div>
+  <article class="aging-card">
+    <div class="aging-label">${item.label}</div>
+    <div class="aging-value">${item.value}</div>
+    <div class="aging-note">${item.note}</div>
   </article>
 `).join("");
 
