@@ -44,6 +44,16 @@ The raw layer focuses on request type, ownership, approval stage, current status
 
 The mock queue stays intentionally practical: intake context, aging cards, a visible queue, and simple breakdowns by request type and status. It should read like a useful internal operations screen, not a product landing page.
 
+## Example Record Flow
+
+One of the clearest lineage threads in this repo is `REQ-617`, tied to `IR-103 | Riverside Schools Facility Upgrade`.
+
+- A field-driven egress conflict becomes a critical support request instead of living in calls and side conversations.
+- The request sits in the queue with visible aging and ownership under Caleb Dyer.
+- That same operating pressure continues downstream as `AI-502` in `execution-infrastructure-demo`, `FI-305` in `contractor-ops-system-demo`, and the Riverside watch-list pressure surfaced in `ops-visibility-demo`.
+
+Other linked threads now visible in the queue include `REQ-626` for the Glenpark closeout package and `REQ-624` for Cedar Hill route coverage strain.
+
 ## Future Enhancements
 
 - add simple SLA expectations by request type and priority

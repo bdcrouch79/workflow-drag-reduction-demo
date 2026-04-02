@@ -252,10 +252,11 @@ table {
 
 th,
 td {
-  padding: 13px 10px;
+  padding: 14px 10px;
   text-align: left;
   border-bottom: 1px solid var(--line);
   font-size: 0.91rem;
+  vertical-align: middle;
 }
 
 th {
@@ -269,6 +270,16 @@ tbody tr:last-child td {
 
 tbody tr:nth-child(odd) {
   background: rgba(255, 255, 255, 0.018);
+}
+
+.row-primary {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.row-secondary {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .aging-stack,
@@ -340,6 +351,20 @@ tbody tr:nth-child(odd) {
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+.aging-pill {
+  display: inline-flex;
+  min-width: 3.2rem;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .high {

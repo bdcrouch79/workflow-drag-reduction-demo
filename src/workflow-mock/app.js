@@ -9,19 +9,20 @@ const requestTypes = [
 ];
 
 const agingCards = [
-  { label: "Open Requests", value: "17", note: "Requests still moving through triage, review, or execution." },
-  { label: "Over 14 Days", value: "8", note: "Items most likely to need follow-up or escalation." },
-  { label: "Waiting On Approval", value: "4", note: "Queue pressure sitting inside review stages." },
-  { label: "Closed Recently", value: "4", note: "Requests closed during the current operating window." }
+  { label: "Open Requests", value: "17", note: "Requests still moving through routing, approval, or follow-through." },
+  { label: "Needs Routing", value: "3", note: "Work is entering faster than owner assignment is settling." },
+  { label: "Waiting Approval", value: "4", note: "Queue pressure is collecting inside review stages." },
+  { label: "Stalled In Queue", value: "2", note: "Assigned requests are still waiting on a real push." }
 ];
 
 const queueRows = [
-  ["REQ-617 | Field Coordination", "Critical", "Caleb Dyer", "In Progress", "21 days"],
-  ["REQ-626 | Closeout Assistance", "High", "Lena Brooks", "Overdue", "24 days"],
-  ["REQ-623 | Document Support", "High", "Lena Brooks", "In Progress", "22 days"],
-  ["REQ-620 | Vendor Setup", "High", "Monica Reeves", "Under Review", "18 days"],
-  ["REQ-610 | Project Setup Change", "High", "Olivia Chen", "Waiting on Info", "19 days"],
-  ["REQ-604 | Reporting Request", "Medium", "Kelsey Morgan", "In Progress", "7 days"]
+  ["REQ-617", "Field Coordination", "Caleb Dyer", "Needs Routing", "5d"],
+  ["REQ-626", "Closeout Assistance", "Lena Brooks", "Waiting Approval", "3d"],
+  ["REQ-624", "Field Coordination", "Jordan Hayes", "Assigned but stalled", "2d"],
+  ["REQ-623", "Document Support", "Lena Brooks", "In Progress", "4d"],
+  ["REQ-620", "Vendor Setup", "Monica Reeves", "Under Review", "6d"],
+  ["REQ-609", "Reporting Request", "Kelsey Morgan", "In Progress", "3d"],
+  ["REQ-615", "Document Support", "Lena Brooks", "Overdue", "9d"]
 ];
 
 const typeMix = [
@@ -32,10 +33,10 @@ const typeMix = [
 ];
 
 const statusMix = [
-  { title: "In Progress", meta: "10 requests currently being worked" },
-  { title: "Submitted", meta: "4 requests awaiting triage" },
-  { title: "Approved", meta: "4 requests ready to move" },
-  { title: "Overdue", meta: "2 requests need immediate attention" }
+  { title: "In Progress", meta: "6 requests are actively moving" },
+  { title: "Needs Routing", meta: "3 requests still lack a settled path" },
+  { title: "Waiting Approval", meta: "4 requests are sitting in review" },
+  { title: "Overdue", meta: "2 requests now need direct intervention" }
 ];
 
 document.getElementById("request-types").innerHTML = requestTypes.map((item) => `
@@ -50,13 +51,29 @@ document.getElementById("aging-cards").innerHTML = agingCards.map((item) => `
   </article>
 `).join("");
 
-document.getElementById("queue-rows").innerHTML = queueRows.map(([request, priority, owner, status, aging]) => `
+function getStatusClass(status) {
+  if (status === "Overdue" || status === "Needs Routing") {
+    return "high";
+  }
+
+  if (status === "Waiting Approval" || status === "Assigned but stalled" || status === "Under Review") {
+    return "medium";
+  }
+
+  return "low";
+}
+
+document.getElementById("queue-rows").innerHTML = queueRows.map(([requestId, type, owner, status, aging]) => `
   <tr>
-    <td>${request}</td>
-    <td><span class="badge ${priority === "Critical" || priority === "High" ? "high" : priority === "Medium" ? "medium" : "low"}">${priority}</span></td>
+    <td>
+      <div class="row-primary">${requestId}</div>
+    </td>
+    <td>
+      <div class="row-secondary">${type}</div>
+    </td>
     <td>${owner}</td>
-    <td>${status}</td>
-    <td>${aging}</td>
+    <td><span class="badge ${getStatusClass(status)}">${status}</span></td>
+    <td><span class="aging-pill">${aging}</span></td>
   </tr>
 `).join("");
 
