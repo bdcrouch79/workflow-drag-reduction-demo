@@ -1,18 +1,14 @@
 # IronRidge Project Support Request Workflow
 
-## Overview
+Most contractor "systems" for internal requests aren't systems — they're an inbox, a spreadsheet somebody guards, and whoever remembers to follow up. This is a working model of what the intake layer looks like when you actually build it instead of duct-taping it together.
 
-This repo shows what happens when scattered internal requests stop living in inboxes, side conversations, and personal trackers.
+## The problem
 
-The IronRidge Project Support Request Workflow models a cleaner queue for intake, routing, approvals, assignment, and aging visibility. It is meant to feel practical, not theoretical.
+IronRidge is a mid-size general contractor. PMs and field staff generate a constant stream of support requests — document control, cost code changes, closeout help, reporting asks — and none of it lives in one place. Ownership goes fuzzy. Approvals stall because nobody can see the queue. A request that should take two days sits for two weeks because nobody's watching how long it's been aging.
 
-## Business Problem
+## What's actually here
 
-Project managers and support teams still send real work through inboxes, meeting notes, hallway conversations, and personal trackers. Things slow down when ownership is fuzzy, approvals sit too long, or nobody can see which requests have been aging quietly in the queue.
-
-## What This Repo Adds
-
-This repo models a practical internal request workflow using lightweight seed data, concise docs, and a static queue mock. The emphasis is believable routing logic, visible aging, and a workflow shape that feels like something an operations team would actually use.
+A request queue with real routing logic: intake, approval stage, owner, current status, days aging. It's seeded with data that looks like an actual GC — employees with real titles and reporting lines, active projects with risk flags, requests tied to specific project IDs, approval records with real decision notes attached. Not placeholder names — Riverside Schools, Northgate Medical, Glenpark Retail, the kind of client mix a GC this size actually carries.
 
 ## Screenshots
 
@@ -22,45 +18,29 @@ This repo models a practical internal request workflow using lightweight seed da
 ### Detail View
 ![Project Support Workflow Detail](docs/screenshots/detail-view.png)
 
-## Ecosystem Context
+## Where this sits in the system
 
-This repo represents the intake and routing layer within the broader IronRidge demo ecosystem. The requests shown here can generate execution commitments tracked in `execution-infrastructure-demo`, may draw on field conditions visible in `contractor-ops-system-demo`, and can ultimately feed reporting demand or volume signals that appear in `ops-visibility-demo`.
+This is the front door. A request that starts here can become a tracked commitment in [`execution-infrastructure-demo`](https://github.com/bdcrouch79/execution-infrastructure-demo), may trace back to a field condition surfaced in [`contractor-ops-system-demo`](https://github.com/bdcrouch79/contractor-ops-system-demo), and eventually shows up as pressure on the leadership dashboard in [`ops-visibility-demo`](https://github.com/bdcrouch79/ops-visibility-demo).
 
-## Repository Structure
+Follow `REQ-617` through all four repos if you want to see the thread end to end: a temporary egress conflict at Riverside Schools turns into a support request here (owned by Caleb Dyer, visibly aging in the queue), an overdue action item in the execution tracker, a severity-rated field issue in the ops tracker, and a watch-list line on the dashboard. Same problem, four vantage points — that's the point of building four repos instead of one. Two more threads run the same path if you want a second example: `REQ-626` (Glenpark closeout) and `REQ-624` (Cedar Hill route coverage).
 
-- `docs/` overview, business context, workflow rules, architecture, diagrams, and ecosystem framing
-- `data/raw/` employees, projects, request records, and approval records
-- `data/curated/` aging, volume, and status summaries
-- `data/sample_exports/` dashboard-ready queue export
-- `src/workflow-mock/` static request queue mock for screenshots and walkthroughs
-- `assets/` shared visual assets including the IronRidge wordmark
-- `notes/` roadmap and screenshot planning
+## Repo layout
 
-## Data And Sample Assets
+- `docs/` — business context, workflow rules, architecture notes, diagrams
+- `data/raw/` — employees, projects, requests, approvals
+- `data/curated/` — aging and status rollups
+- `data/sample_exports/` — a dashboard-ready export
+- `src/workflow-mock/` — the queue UI. Plain HTML/CSS/JS, no framework, no build step — open `index.html` and click through it
+- `assets/` — shared IronRidge branding
+- `notes/` — roadmap
 
-The raw layer focuses on request type, ownership, approval stage, current status, and aging. The sample records stay grounded in common contractor support work such as document control, setup changes, reporting requests, field coordination, and closeout help.
+## What I'd build next
 
-## Mock Experience
+- SLA rules by request type and priority
+- Approval logic that actually branches on cost or staffing impact
+- Owner and department workload views
+- Cycle time and approval wait-time reporting
 
-The mock queue stays intentionally practical: intake context, aging cards, a visible queue, and simple breakdowns by request type and status. It should read like a useful internal operations screen, not a product landing page.
+## One note
 
-## Example Record Flow
-
-One of the clearest lineage threads in this repo is `REQ-617`, tied to `IR-103 | Riverside Schools Facility Upgrade`.
-
-- A field-driven egress conflict becomes a critical support request instead of living in calls and side conversations.
-- The request sits in the queue with visible aging and ownership under Caleb Dyer.
-- That same operating pressure continues downstream as `AI-502` in `execution-infrastructure-demo`, `FI-305` in `contractor-ops-system-demo`, and the Riverside watch-list pressure surfaced in `ops-visibility-demo`.
-
-Other linked threads now visible in the queue include `REQ-626` for the Glenpark closeout package and `REQ-624` for Cedar Hill route coverage strain.
-
-## Future Enhancements
-
-- add simple SLA expectations by request type and priority
-- expand approval rules for cost, staffing, or client-impacting changes
-- add workload and queue views by owner or department
-- surface cycle time and approval wait-time reporting
-
-## Fictional Demo Notice
-
-This repository is part of a fictional IronRidge Contractors environment built to show reporting, workflow, execution, and field operations design. The names and records are made up. The operating friction is not.
+IronRidge and everyone in this data set are made up. The friction — requests dying in inboxes, approvals nobody can see, aging nobody's tracking — is the part I've actually run into.
